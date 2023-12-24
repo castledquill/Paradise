@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;mob&#x2F;dead&#x2F;observer - Paradise Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Paradise Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="mob/dead/observer.html#var">Var Details</a> - <a href="mob/dead/observer.html#proc">Proc Details</a></header>
+<main>
+<h1>observer <aside>/<a href="mob.html">mob</a>/<a href="mob/dead/observer.html">dead/observer</a></aside>
+        
+    
+            <a href="https://github.com/ParadiseSS13/Paradise/blob/c6f55533bdfbcfac6d01a3047c972c78463e36eb/code/modules/mob/dead/observer/observer_base.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;observer&#x2F;observer_base.dm 8"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="mob/dead/observer.html#var/data_hud_seen">data_hud_seen</a></th><td>Defines from __DEFINES/hud.dm go here based on which huds the ghost has activated.</td></tr>
+            <tr><th><a href="mob/dead/observer.html#var/gas_analyzer">gas_analyzer</a></th><td>toggle for ghost gas analyzer</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="mob/dead/observer.html#proc/check_ahud_rejoin_eligibility">check_ahud_rejoin_eligibility</a></th><td>Check if a player has antag-hudded, and if so, if they can rejoin.
+Returns TRUE if the player can rejoin, and FALSE if the player is ineligible to rejoin.
+If allow_roundstart_observers is FALSE (TRUE by default), then any observers who were able to ahud due to joining roundstart will be excluded as well.</td></tr>
+            <tr><th><a href="mob/dead/observer.html#proc/toggle_all_huds_off">toggle_all_huds_off</a></th><td>Toggles off all HUDs for the ghost player.</td></tr>
+            <tr><th><a href="mob/dead/observer.html#proc/toggle_all_huds_on">toggle_all_huds_on</a></th><td>Toggles on all HUDs for the ghost player.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/data_hud_seen"><aside class="declaration">var </aside>data_hud_seen
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/ParadiseSS13/Paradise/blob/c6f55533bdfbcfac6d01a3047c972c78463e36eb/code/modules/mob/dead/observer/observer_base.dm#L32">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;observer&#x2F;observer_base.dm 32"/></a></h3>
+        <p>Defines from __DEFINES/hud.dm go here based on which huds the ghost has activated.</p><h3 id="var/gas_analyzer"><aside class="declaration">var </aside>gas_analyzer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/ParadiseSS13/Paradise/blob/c6f55533bdfbcfac6d01a3047c972c78463e36eb/code/modules/mob/dead/observer/observer_base.dm#L36">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;observer&#x2F;observer_base.dm 36"/></a></h3>
+        <p>toggle for ghost gas analyzer</p><h2 id="proc">Proc Details</h2><h3 id="proc/check_ahud_rejoin_eligibility"><aside class="declaration">proc </aside>check_ahud_rejoin_eligibility<aside>(allow_roundstart_observers) 
+        
+    
+            <a href="https://github.com/ParadiseSS13/Paradise/blob/c6f55533bdfbcfac6d01a3047c972c78463e36eb/code/modules/mob/dead/observer/observer_base.dm#L836">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;observer&#x2F;observer_base.dm 836"/></a></aside>
+        </h3>
+        <p>Check if a player has antag-hudded, and if so, if they can rejoin.
+Returns TRUE if the player can rejoin, and FALSE if the player is ineligible to rejoin.
+If allow_roundstart_observers is FALSE (TRUE by default), then any observers who were able to ahud due to joining roundstart will be excluded as well.</p><h3 id="proc/toggle_all_huds_off"><aside class="declaration">proc </aside>toggle_all_huds_off<aside>() 
+        
+    
+            <a href="https://github.com/ParadiseSS13/Paradise/blob/c6f55533bdfbcfac6d01a3047c972c78463e36eb/code/modules/mob/dead/observer/observer_base.dm#L363">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;observer&#x2F;observer_base.dm 363"/></a></aside>
+        </h3>
+        <p>Toggles off all HUDs for the ghost player.</p><h3 id="proc/toggle_all_huds_on"><aside class="declaration">proc </aside>toggle_all_huds_on<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/ParadiseSS13/Paradise/blob/c6f55533bdfbcfac6d01a3047c972c78463e36eb/code/modules/mob/dead/observer/observer_base.dm#L350">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;observer&#x2F;observer_base.dm 350"/></a></aside>
+        </h3>
+        <p>Toggles on all HUDs for the ghost player.</p>
+<p>Enables antag HUD only if the ghost belongs to an admin.</p>
+<p>Arguments:</p>
+<ul>
+<li>user - A reference to the ghost's old mob. This argument is required since <code>src</code> does not have a <code>client</code> at this point.</li>
+</ul></main>
+<footer>
+    paradise.dme
+    <a href="https://github.com/ParadiseSS13/Paradise/tree/c6f55533bdfbcfac6d01a3047c972c78463e36eb">c6f5553</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>
